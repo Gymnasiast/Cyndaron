@@ -1,6 +1,6 @@
 <?php
-require_once('check.php');
-require_once('functies.url.php');
+require_once(__DIR__.'/check.php');
+require_once(__DIR__.'/functies.url.php');
 
 $id = geefGetVeilig('id');
 $type = geefGetVeilig('type');

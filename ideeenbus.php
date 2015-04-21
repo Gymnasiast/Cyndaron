@@ -1,7 +1,7 @@
 <?php
-require_once('functies.db.php');
-require_once('functies.gebruikers.php');
-require_once('pagina.php');
+require_once(__DIR__.'/functies.db.php');
+require_once(__DIR__.'/functies.gebruikers.php');
+require_once(__DIR__.'/pagina.php');
 $pagina=new Pagina('Idee&euml;nbus');
 $pagina->toonPrePagina();
 $actie=$_GET['actie'];

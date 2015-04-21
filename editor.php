@@ -1,8 +1,8 @@
 <?php
-require_once('check.php');
-require_once('functies.db.php');
-require_once('functies.url.php');
-require_once('pagina.php');
+require_once(__DIR__.'/check.php');
+require_once(__DIR__.'/functies.db.php');
+require_once(__DIR__.'/functies.url.php');
+require_once(__DIR__.'/pagina.php');
 
 $id = geefGetVeilig('id');
 $vorigeversie = geefGetVeilig('vorigeversie');
@@ -14,12 +14,13 @@ if ($vorigeversie)
 $type = geefGetVeilig('type');
 $heeftTitel=true;
 
-if (@file_exists('editor.'.$type.'.php'))
+if (@file_exists(__DIR__.'/editor.'.$type.'.php'))
 {
-	require('editor.'.$type.'.php');
+	require(__DIR__.'/editor.'.$type.'.php');
 }
 else
 {
+	echo __DIR__.'/editor.'.$type.'.php';
 	die ('Ongeldig paginatype!');
 }
 

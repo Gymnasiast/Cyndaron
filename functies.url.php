@@ -11,13 +11,13 @@ function verwerkUrl($url)
 		$_GET[$key]=$value;
 	}
 	
-	if (file_exists($bestand))
+	if (file_exists(__DIR__.'/'.$bestand))
 	{
-		include($bestand);
+		include(__DIR__.'/'.$bestand);
 	}
 	else
 	{
-		include('404.php');
+		include(__DIR__.'/404.php');
 		die();
 	}
 }
@@ -47,11 +47,6 @@ function isDezelfdePagina($url1, $url2)
 	}
 	else
 	{
-		/*$hoofdurl=geefUnfriendlyUrl(geefEen('SELECT link FROM menu WHERE volgorde=(SELECT MIN(volgorde) FROM menu)',array()));
-		if (($url1=='/' && $url2==$hoofdurl) || ($url2=='/' && $url1==$hoofdurl))
-		{
-			return true;
-		}*/
 		return false;
 	}
 }
@@ -79,4 +74,12 @@ function maakFriendlyUrl($naam, $doel)
 function verwijderFriendlyUrl($naam)
 {
 	maakEen('DELETE FROM friendlyurls WHERE naam=?',array($naam));
+}
+
+function geefUriPad()
+{
+	$dir=dirname($_SERVER[PHP_SELF]);
+	if ($dir=='/')
+		$dir='';
+	return 'http://'.$_SERVER['HTTP_HOST'].$dir.'/';
 }

@@ -1,7 +1,7 @@
 <?php
 header('HTTP/1.0 404 Not Found');
 
-require_once('pagina.php');
+require_once(__DIR__.'/pagina.php');
 $pagina=new Pagina('404: Not Found');
 $pagina->maakNietDelen(true);
 $pagina->toonPrePagina();

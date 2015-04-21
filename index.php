@@ -1,6 +1,6 @@
 <?php
-require_once('functies.db.php');
-require_once('functies.url.php');
+require_once(__DIR__.'/functies.db.php');
+require_once(__DIR__.'/functies.url.php');
 
 $request=htmlentities($_GET['pagina'], null, 'UTF-8');
 
@@ -11,13 +11,19 @@ if((substr($request,0,1)=='.' || substr($request,0,1)=='/') && $request!='/')
 }
 
 $hoofdurl=geefEen('SELECT link FROM menu WHERE volgorde=(SELECT MIN(volgorde) FROM menu)',array());
+
+if (!$hoofdurl)
+{
+	$hoofdurl='overzicht.php';
+}
+
 if (geefUnfriendlyUrl($hoofdurl)==geefUnfriendlyUrl($request))
 {
-	header('Location: /');
+	header('Location: '.dirname($_SERVER[REQUEST_URI]).'');
 }
 
 //Hoofdpagina
-if ($request=='/' || $request==false)
+if ($request=='/' || $request==false || substr($request,-1)=='/')
 {
 	verwerkUrl($hoofdurl);
 }

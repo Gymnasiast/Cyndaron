@@ -1,8 +1,8 @@
 <?php
-require_once('functies.lingo.php');
-require_once('functies.db.php');
-require_once('functies.url.php');
-require_once('pagina.php');
+require_once(__DIR__.'/functies.lingo.php');
+require_once(__DIR__.'/functies.db.php');
+require_once(__DIR__.'/functies.url.php');
+require_once(__DIR__.'/pagina.php');
 $connectie=newPDO();
 $id=($_GET['id']);
 if ($id!='fotoboeken' && (!is_numeric($id) || $id<0))

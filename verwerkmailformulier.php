@@ -1,6 +1,6 @@
 <?php
-require_once('functies.db.php');
-require_once('pagina.php');
+require_once(__DIR__.'/functies.db.php');
+require_once(__DIR__.'/pagina.php');
 $id=htmlentities($_GET['id'], null, 'UTF-8');
 $connectie=newPDO();
 $formprep=$connectie->prepare('SELECT * FROM mailformulieren WHERE id=?');

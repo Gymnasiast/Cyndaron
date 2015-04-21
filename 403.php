@@ -1,7 +1,7 @@
 <?php
 header('HTTP/1.0 403 Forbidden');
 
-require_once('pagina.php');
+require_once(__DIR__.'/pagina.php');
 $pagina=new Pagina('403: Forbidden');
 $pagina->maakNietDelen(true);
 $pagina->toonPrePagina();

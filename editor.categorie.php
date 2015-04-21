@@ -1,5 +1,4 @@
 <?php
-//$doellink='bewerkcategorie.php?id='.$id.'&amp;actie=bewerken';
 $heeftTitel=true;
 
 if ($id)

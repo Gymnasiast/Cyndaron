@@ -1,8 +1,8 @@
 <?php
-require_once('functies.url.php');
-require_once('functies.db.php');
-require_once('functies.pagina.php');
-require_once('functies.gebruikers.php');
+require_once(__DIR__.'/functies.url.php');
+require_once(__DIR__.'/functies.db.php');
+require_once(__DIR__.'/functies.pagina.php');
+require_once(__DIR__.'/functies.gebruikers.php');
 // Verwijs oude URLs door
 
 if ($_GET['friendlyurls']!==true && $url=geefEen('SELECT naam FROM friendlyurls WHERE doel=?', array(basename(substr($_SERVER['REQUEST_URI'],1)))))
@@ -63,7 +63,7 @@ class Pagina
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo $this->paginanaam . ' - ' . $websitenaam . '</title>'; 
-		echo '<link href="stijl.css" type="text/css" rel="stylesheet" />';
+		echo '<link href="'.geefInstelling('cyndir').'stijl.css" type="text/css" rel="stylesheet" />';
 		if($favicon=geefInstelling('favicon'))
 		{
 			$extensie=substr(strrchr($favicon, "."), 1);

@@ -1,7 +1,7 @@
 <?php
-require_once('functies.db.php');
-require_once('functies.pagina.php');
-require_once('pagina.php');
+require_once(__DIR__.'/functies.db.php');
+require_once(__DIR__.'/functies.pagina.php');
+require_once(__DIR__.'/pagina.php');
 $boekid=$_GET['id'];
 if (!is_numeric($boekid) || $boekid<1)
 {

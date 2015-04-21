@@ -167,7 +167,7 @@ function geefPictogram($naam)
 	$thema=geefInstelling('pictogrammenthema');
 	if (!$thema)
 		$thema='mono';
-	$prefix='sys/pictogrammen/'.$thema.'/';
+	$prefix=geefInstelling('cyndir').'sys/pictogrammen/'.$thema.'/';
 	if (file_exists($prefix.$naam.'.png'))
 		return $prefix.$naam.'.png';
 	else

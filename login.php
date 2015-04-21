@@ -1,7 +1,7 @@
 <?php
-require_once('pagina.php');
-require_once('functies.lingo.php');
-require_once('functies.db.php');
+require_once(__DIR__.'/pagina.php');
+require_once(__DIR__.'/functies.lingo.php');
+require_once(__DIR__.'/functies.db.php');
 
 if (!$_SESSION)
 	session_start();

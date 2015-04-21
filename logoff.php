@@ -1,5 +1,5 @@
 <?php
-require_once('functies.gebruikers.php');
+require_once(__DIR__.'/functies.gebruikers.php');
 
 session_start(); 
 session_destroy(); 

@@ -1,8 +1,8 @@
 <?php
-require_once('functies.db.php');
-require_once('functies.pagina.php');
-require_once('functies.gebruikers.php');
-require_once('pagina.php');
+require_once(__DIR__.'/functies.db.php');
+require_once(__DIR__.'/functies.pagina.php');
+require_once(__DIR__.'/functies.gebruikers.php');
+require_once(__DIR__.'/pagina.php');
 
 $bestandsnr=$_GET['bestandsnr'];
 $boekid=htmlentities($_GET['boekid'], null, 'UTF-8');

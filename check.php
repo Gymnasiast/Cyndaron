@@ -1,5 +1,5 @@
 <?php
-require_once('functies.gebruikers.php');
+require_once(__DIR__.'/functies.gebruikers.php');
 /*
 * Require deze pagina bovenaan iedere pagina die alleen voor members toegankelijk mag zijn.
 * Dit moet helemaal bovenaan, omdat anders de session_start() & header() functie niet werken.
