@@ -30,6 +30,7 @@ class Router
         'toonfotoboek.php' => '\Cyndaron\FotoalbumPagina',
         'toonsub.php' => '\Cyndaron\StatischePagina',
         'verwerkmailformulier.php' => '\Cyndaron\VerwerkMailformulierPagina',
+        'verwerkmailformulier-ldbf' => '\Cyndaron\VerwerkMailformulierPaginaLDBF',
         // Standaard-plugins
         'bestandenkast.php' => '\Cyndaron\Bestandenkast\OverzichtPagina',
         'kaartenbestellen.php' => '\Cyndaron\Kaartverkoop\KaartenBestellenPagina',
