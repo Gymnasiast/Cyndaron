@@ -150,7 +150,7 @@ class VerwerkMailformulierPaginaLDBF extends Pagina
                 $extraheaders = 'From: "Website Leen de Broekert Fonds" <noreply@leendebroekertfonds.nl>' . "\n" .
                                 'Content-Type: text/html; charset="UTF-8"';
 
-                $mail1 = mail('m.o.steenbeek@gmail.com', 'Nieuwe aanvraag', $tekst, $extraheaders);
+                $mail1 = mail('voorzitter@leendebroekertfonds.nl', 'Nieuwe aanvraag', $tekst, $extraheaders);
                 $mail2 = mail(Request::geefPostVeilig('E-mailadres'), 'Kopie aanvraag', $tekst, $extraheaders);
 
                 if ($mail1 && $mail2)
